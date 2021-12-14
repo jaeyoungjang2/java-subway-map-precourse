@@ -24,4 +24,8 @@ public class OutputView {
     public static void finishDeleteLine() {
         System.out.println("[INFO] 지하철 노선이 삭제되었습니다.");
     }
+
+    public static void finishRegistSection() {
+        System.out.println("[INFO] 구간이 등록되었습니다.");
+    }
 }

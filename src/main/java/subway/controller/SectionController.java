@@ -3,6 +3,7 @@ package subway.controller;
 import java.util.Scanner;
 import subway.domain.LineRepository;
 import subway.view.InputView;
+import subway.view.OutputView;
 
 public class SectionController {
     private final Scanner scanner;
@@ -22,6 +23,9 @@ public class SectionController {
             String targetStation = InputView.registSectionStation(scanner);
             String order = InputView.sectionTargetStationOrder(scanner);
             LineRepository.addSectionByStationOrder(targetLine, targetStation, Integer.parseInt(order));
+            OutputView.finishRegistSection();
         }
+
+
     }
 }
