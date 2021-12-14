@@ -25,6 +25,13 @@ public class StationController {
             StationRepository.addStation(new Station(station));
             InputView.finishRegistStation();
         }
+
+        if (main.equals("2")) {
+            String deleteStation = InputView.deleteStation(scanner);
+            StationRepository.deleteStation(deleteStation);
+            OutputView.finishDeleteStation();
+        }
+
         if (main.equals("3")) {
             StationRepository stationRepository = new StationRepository();
             OutputView.printStationState(stationRepository);

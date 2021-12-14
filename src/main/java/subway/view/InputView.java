@@ -35,4 +35,9 @@ public class InputView {
     public static void finishRegistStation() {
         System.out.println("[INFO] 지하철 역이 등록되었습니다.");
     }
+
+    public static String deleteStation(Scanner scanner) {
+        System.out.println("## 삭제할 역 이름을 입력하세요.");
+        return scanner.nextLine();
+    }
 }
