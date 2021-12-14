@@ -1,6 +1,8 @@
 package subway.controller;
 
 import java.util.Scanner;
+import subway.domain.Station;
+import subway.domain.StationRepository;
 import subway.view.InputView;
 
 public class StationController {
@@ -17,6 +19,10 @@ public class StationController {
         // 2. 역 삭제
         // 3. 역 조회
         // B. 돌아가기
-
+        if (main.equals("1")) {
+            String station = InputView.registStation(scanner);
+            StationRepository.addStation(new Station(station));
+            InputView.finishRegistStation();
+        }
     }
 }
