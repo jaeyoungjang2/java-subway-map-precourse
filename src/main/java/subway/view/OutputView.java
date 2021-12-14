@@ -20,4 +20,8 @@ public class OutputView {
         System.out.println("## 역 목록");
         System.out.println(toString);
     }
+
+    public static void finishDeleteLine() {
+        System.out.println("[INFO] 지하철 노선이 삭제되었습니다.");
+    }
 }

@@ -36,5 +36,11 @@ public class LineController {
             LineRepository lineRepository = new LineRepository();
             OutputView.printLineState(lineRepository.toString());
         }
+
+        if (lineMain.equals("2")) {
+            String targetLine = InputView.deleteLine(scanner);
+            LineRepository.deleteLineByName(targetLine);
+            OutputView.finishDeleteLine();
+        }
     }
 }
