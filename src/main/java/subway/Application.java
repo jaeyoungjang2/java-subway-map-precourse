@@ -15,9 +15,18 @@ public class Application {
         initStation();
         initLine();
 
-        String mainSelect = InputView.requireMain(scanner);
-        if (mainSelect.equals("1")) {
-            stationController.run();
+
+
+        while (true) {
+            String mainSelect = InputView.requireMain(scanner);
+
+            if (mainSelect.equals("1")) {
+                stationController.run();
+            }
+
+            if (mainSelect.equals("Q")) {
+                break;
+            }
         }
     }
 

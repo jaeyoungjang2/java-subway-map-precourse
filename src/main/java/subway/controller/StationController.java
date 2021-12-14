@@ -36,5 +36,7 @@ public class StationController {
             StationRepository stationRepository = new StationRepository();
             OutputView.printStationState(stationRepository);
         }
+
+
     }
 }
