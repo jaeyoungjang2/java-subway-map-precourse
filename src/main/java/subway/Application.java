@@ -12,6 +12,7 @@ public class Application {
     public static void main(String[] args) {
         final Scanner scanner = new Scanner(System.in);
         StationController stationController = new StationController(scanner);
+        LineController lineController = new LineController(scanner);
         initStation();
         initLine();
 
@@ -23,6 +24,10 @@ public class Application {
             if (mainSelect.equals("1")) {
                 stationController.run();
             }
+
+            if (mainSelect.equals("2"))
+                lineController.run();
+
 
             if (mainSelect.equals("Q")) {
                 break;
