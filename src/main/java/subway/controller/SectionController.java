@@ -26,6 +26,10 @@ public class SectionController {
             OutputView.finishRegistSection();
         }
 
-
+        if (sectionInfo.equals("2")) {
+            String targetLine = InputView.deleteSectionLine(scanner);
+            String targetStation = InputView.deleteSectionStation(scanner);
+            LineRepository.deleteSectionByStation(targetLine, targetStation);
+        }
     }
 }

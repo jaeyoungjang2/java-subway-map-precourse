@@ -28,6 +28,14 @@ public class LineRepository {
         }
     }
 
+    public static void deleteSectionByStation(String targetLine, String targetStation) {
+        for (Line line : lines) {
+            if (Objects.equals(line.getName(), targetLine)) {
+                line.deleteStationByName(targetStation);
+            }
+        }
+    }
+
     @Override
     public String toString() {
         String lineInfo = "";

@@ -2,6 +2,7 @@ package subway.domain;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Line {
     private String name;
@@ -27,5 +28,9 @@ public class Line {
 
     public void addStationByOrder(String stationName, Integer order) {
         stations.add(order, new Station(stationName));
+    }
+
+    public boolean deleteStationByName(String targetStation) {
+        return stations.removeIf(station -> Objects.equals(station.getName(), targetStation));
     }
 }
