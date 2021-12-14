@@ -1,6 +1,8 @@
 package subway;
 
 import java.util.Scanner;
+import subway.controller.LineController;
+import subway.controller.SectionController;
 import subway.controller.StationController;
 import subway.domain.Line;
 import subway.domain.LineRepository;
@@ -13,6 +15,7 @@ public class Application {
         final Scanner scanner = new Scanner(System.in);
         StationController stationController = new StationController(scanner);
         LineController lineController = new LineController(scanner);
+        SectionController sectionController = new SectionController(scanner);
         initStation();
         initLine();
 
@@ -28,6 +31,8 @@ public class Application {
             if (mainSelect.equals("2"))
                 lineController.run();
 
+            if (mainSelect.equals("3"))
+                sectionController.run();
 
             if (mainSelect.equals("Q")) {
                 break;

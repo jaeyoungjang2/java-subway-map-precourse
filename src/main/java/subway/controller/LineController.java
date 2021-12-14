@@ -1,4 +1,4 @@
-package subway;
+package subway.controller;
 
 import java.util.Scanner;
 import subway.domain.Line;
