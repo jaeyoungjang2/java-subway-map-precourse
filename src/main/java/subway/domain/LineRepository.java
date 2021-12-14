@@ -19,4 +19,13 @@ public class LineRepository {
     public static boolean deleteLineByName(String name) {
         return lines.removeIf(line -> Objects.equals(line.getName(), name));
     }
+
+    @Override
+    public String toString() {
+        String lineInfo = "";
+        for (Line line : lines) {
+            lineInfo += String.format("[INFO] %s%n", line.toString());
+        }
+        return lineInfo;
+    }
 }

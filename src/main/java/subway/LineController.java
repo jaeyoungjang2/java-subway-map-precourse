@@ -1,7 +1,10 @@
 package subway;
 
 import java.util.Scanner;
+import subway.domain.Line;
+import subway.domain.LineRepository;
 import subway.view.InputView;
+import subway.view.OutputView;
 
 public class LineController {
     private final Scanner scanner;
@@ -18,6 +21,20 @@ public class LineController {
         // B. 돌아가기
         String lineMain = InputView.lineMain(scanner);
 
+        if (lineMain.equals("1")) {
+            String targetLine = InputView.registLine(scanner);
+            String upLine = InputView.registUpLine(scanner);
+            String downLine = InputView.registDownLine(scanner);
+            Line line = new Line(targetLine);
+            line.addStation(upLine);
+            line.addStation(downLine);
+            LineRepository.addLine(line);
+            OutputView.finishRegistLine();
+        }
 
+        if (lineMain.equals("3")) {
+            LineRepository lineRepository = new LineRepository();
+            OutputView.printLineState(lineRepository.toString());
+        }
     }
 }

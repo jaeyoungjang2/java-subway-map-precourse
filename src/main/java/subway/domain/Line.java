@@ -20,4 +20,8 @@ public class Line {
         stations.add(new Station(station));
     }
 
+    @Override
+    public String toString() {
+        return name;
+    }
 }
