@@ -19,4 +19,13 @@ public class StationRepository {
     public static boolean deleteStation(String name) {
         return stations.removeIf(station -> Objects.equals(station.getName(), name));
     }
+
+    @Override
+    public String toString() {
+        String stationInfo = "";
+        for (Station station : stations) {
+            stationInfo += String.format("[INFO] %s%n", station.toString());
+        }
+        return stationInfo;
+    }
 }
