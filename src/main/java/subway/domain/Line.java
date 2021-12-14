@@ -24,4 +24,8 @@ public class Line {
     public String toString() {
         return name;
     }
+
+    public void addStationByOrder(String stationName, Integer order) {
+        stations.add(order, new Station(stationName));
+    }
 }

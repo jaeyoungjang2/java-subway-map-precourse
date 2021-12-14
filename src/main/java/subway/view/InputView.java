@@ -71,4 +71,29 @@ public class InputView {
         System.out.println("## 삭제할 노선 이름을 입력하세요.");
         return scanner.nextLine();
     }
+
+    public static String sectionMain(Scanner scanner) {
+        System.out.println("## 구간 관리 화면");
+        System.out.println("1. 구간 등록");
+        System.out.println("2. 구간 삭제");
+        System.out.println("B. 돌아가기");
+        System.out.println();
+        System.out.println("## 원하는 기능을 선택하세요.");
+        return scanner.nextLine();
+    }
+
+    public static String registSectionLine(Scanner scanner) {
+        System.out.println("## 노선을 입력하세요.");
+        return scanner.nextLine();
+    }
+
+    public static String registSectionStation(Scanner scanner) {
+        System.out.println("## 역이름을 입력하세요.");
+        return scanner.nextLine();
+    }
+
+    public static String sectionTargetStationOrder(Scanner scanner) {
+        System.out.println("## 순서를 입력하세요.");
+        return scanner.nextLine();
+    }
 }

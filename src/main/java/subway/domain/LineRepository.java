@@ -20,6 +20,14 @@ public class LineRepository {
         return lines.removeIf(line -> Objects.equals(line.getName(), name));
     }
 
+    public static void addSectionByStationOrder(String lineName, String stationName, Integer order) {
+        for (Line line : lines) {
+            if (Objects.equals(line.getName(), lineName)) {
+                line.addStationByOrder(stationName, order);
+            }
+        }
+    }
+
     @Override
     public String toString() {
         String lineInfo = "";
